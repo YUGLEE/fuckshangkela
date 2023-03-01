@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.Mapper;
 import top.yugle.fuckshangkela.entity.UserInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
 * @author YUGLE
 * @description 针对表【user_info】的数据库操作Mapper
@@ -13,6 +15,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 @Mapper
 public interface UserInfoMapper extends BaseMapper<UserInfo> {
 
+    List<UserInfo> selectAll();
 }
 
 

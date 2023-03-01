@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import top.yugle.fuckshangkela.service.UserInfoService;
 
+import java.io.IOException;
+
 /**
  * @author YUGLE
  */
@@ -14,9 +16,8 @@ public class HelloController {
     UserInfoService userInfoService;
 
     @GetMapping("/code")
-    public String hello(@Param("code") Integer code){
-        System.out.println("userInfo = " + code.toString());
-        return code.toString();
+    public String hello(@Param("code") Integer code) throws IOException {
+        return userInfoService.hello(code);
     }
 
     @GetMapping("/add")

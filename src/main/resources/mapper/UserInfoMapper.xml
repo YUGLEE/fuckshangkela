@@ -11,4 +11,8 @@
     <sql id="Base_Column_List">
         userId
     </sql>
+
+    <select id="selectAll" resultType="top.yugle.fuckshangkela.entity.UserInfo">
+        select * from user_info;
+    </select>
 </mapper>

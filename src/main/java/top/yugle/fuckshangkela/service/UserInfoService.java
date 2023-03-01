@@ -3,6 +3,8 @@ package top.yugle.fuckshangkela.service;
 import top.yugle.fuckshangkela.entity.UserInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.io.IOException;
+
 /**
 * @author YUGLE
 * @description 针对表【user_info】的数据库操作Service
@@ -11,4 +13,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface UserInfoService extends IService<UserInfo> {
 
     String addUser(Integer userId);
+
+    String hello(Integer code) throws IOException;
 }
